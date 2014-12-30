@@ -1,0 +1,18 @@
+{
+  "name": "dominiquebroudin",
+  "description": "Dominique Broudin's personnal WW1 collection website",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "styleguide": "node styleguide"
+  },
+  "repository": "https://github.com/AlexandreBroudin/dominiquebroudin.com",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Alexandre Broudin",
+  "license": "MIT",
+  "devDependencies": {
+    "node-styleguide": "onaliugo/node-styleguide"
+  }
+}

@@ -1,0 +1,30 @@
+// Grid
+
+$columnNumber: 4;
+$grids: s-, m-;
+$classes: ();
+$cols: ();
+
+// Margins
+
+$baseMargin: $baseLineHeight !default;
+
+$marginXXS: $baseMargin * exponent($baseScaleFactor, -4);
+$marginXS:  $baseMargin * exponent($baseScaleFactor, -3);
+$marginS:   $baseMargin * exponent($baseScaleFactor, -2);
+$marginM:   $baseMargin;
+$marginL:   $baseMargin * $baseScaleFactor;
+$marginXL:  $baseMargin * exponent($baseScaleFactor, 2);
+$marginXXL: $baseMargin * exponent($baseScaleFactor, 3);
+
+// Paddings
+
+$basePadding: $baseLineHeight !default;
+
+$paddingXXS:  $basePadding * exponent($baseScaleFactor, -4);
+$paddingXS:   $basePadding * exponent($baseScaleFactor, -3);
+$paddingS:    $basePadding * exponent($baseScaleFactor, -2);
+$paddingM:    $basePadding;
+$paddingL:    $basePadding * $baseScaleFactor;
+$paddingXL:   $basePadding * exponent($baseScaleFactor, 2);
+$paddingXXL:  $basePadding * exponent($baseScaleFactor, 3);

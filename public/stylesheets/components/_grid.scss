@@ -1,0 +1,38 @@
+.Container {
+  width: 100%;
+}
+
+.Container--fixed {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.row {
+  @include cf();
+}
+
+.c {
+  float: left;
+  min-height: 1px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+// Generate columns
+
+@for $i from 1 to ($columnNumber + 1) {
+  @each $grid in $grids {
+    $classes: join($classes, unquote(".col#{$grid}-#{$i}"), comma);
+    @if $i < $columnNumber {
+      $cols: join($classes, unquote(".col#{$grid}-#{$i}"), comma);
+    }
+  }
+  .c-#{$i} {
+    width: percentage(( $i / $columnNumber));
+    @if $i == 12 {
+      float: none;
+      width: auto;
+    }
+
+  }
+}

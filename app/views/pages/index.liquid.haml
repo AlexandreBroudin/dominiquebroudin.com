@@ -1,0 +1,18 @@
+---
+title: Home page
+published: true
+---
+!!!
+%html{lang: "en"}
+  %head
+  %meta{charset: "utf-8"}
+  %title {{ site.name }}
+  %meta{name: "keywords", value: "{{ site.meta_keywords }}"}
+  %meta{name: "description", value: "{{ site.meta_description }}"}
+  {{ 'style.css' | stylesheet_tag }}
+  %body
+  %h1 {{ page.title }}
+  {% block 'main' %}
+  %p Lorem ipsum....
+  {% endblock %}
+  %a{:href => "styleguide"} styleguide

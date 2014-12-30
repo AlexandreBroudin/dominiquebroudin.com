@@ -1,0 +1,67 @@
+// REM calculation
+// base font has to be defined to :root
+
+@function rem($size) {
+  $remSize: $size / $baseFontSize;
+  @return $remSize * 1rem;
+}
+
+// Exponent
+
+@function exponent($base, $exponent) {
+  // reset value
+  $value: $base;
+  // positive intergers get multiplied
+  @if $exponent > 1 {
+    @for $i from 2 through $exponent {
+      $value: $value * $base; } }
+  // negitive intergers get divided. A number divided by itself is 1
+  @if $exponent < 1 {
+    @for $i from 0 through -$exponent {
+      $value: $value / $base; } }
+  // return the last value written
+  @return $value;
+}
+
+@function pow($base, $exponent) {
+  @return exponent($base, $exponent);
+}
+
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+
+// Rem 2 Px
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function px($values) {
+
+  $list: ();
+
+  @each $value in $values {
+
+    $unit : unit($value);
+    $val  : parseInt($value);
+
+    @if ($px-only) and ($unit == 'rem') {
+          $list: append($list, floor(($val * $baseFontSize)));
+    }
+
+    @else if ($unit == 'px') or ($unit == 'rem') {
+          $list: append($list, $value);
+    }
+
+    @else {
+          @warn 'There is no unit conversion for #{$unit}';
+    }
+
+  }
+
+  @return $list();
+
+}

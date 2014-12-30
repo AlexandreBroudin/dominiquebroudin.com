@@ -1,0 +1,9 @@
+// clear floats
+
+.u-cf {
+  @include cf();
+}
+
+.u-tac {
+  text-align: center;
+}

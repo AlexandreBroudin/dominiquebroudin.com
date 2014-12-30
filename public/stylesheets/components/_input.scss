@@ -1,0 +1,40 @@
+.Input {
+  color: $zorba;
+  border: {
+    style: solid;
+    width: 1px;
+    color: $zorba;
+  }
+  padding: $paddingS;
+  line-height: $baseLineHeight;
+
+  // Basic focus styles
+  &:focus,
+  &.isFocused {
+    border: {
+      color: $steelBlue;
+    }
+    box-shadow: inset 0 0 0 1px $steelBlue;
+    outline: none;
+    @include placeholder {
+      color: $steelBlue;
+    }
+    color: $steelBlue;
+  }
+  // Disbaled Styles
+  &:disabled {
+    background: $westar;
+    border: none;
+  }
+
+  // Disabled background input background color
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+
+  }
+}
+
+.Input--s {
+  padding: $paddingXS;
+}

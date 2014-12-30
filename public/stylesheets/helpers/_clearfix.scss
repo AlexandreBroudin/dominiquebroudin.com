@@ -1,0 +1,16 @@
+// Micro Clearfix to clear floats.
+// http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin cf {
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+    zoom: 1;
+  }
+
+}

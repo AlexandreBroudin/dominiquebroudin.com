@@ -1,0 +1,56 @@
+.Dropdown {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "▾";
+    right: $paddingS;
+    top: $paddingS;
+  }
+
+  &:hover {
+
+    &:after {
+      color: $steelBlue;
+    }
+
+  }
+
+  &:active {
+
+    &:after {
+      color: $steelBlue;
+    }
+
+  }
+
+}
+
+.Dropdown-Select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  padding: $paddingS $paddingL $paddingS $paddingS;
+  line-height: $baseLineHeight;
+  border-radius: 0;
+  border: none;
+
+  border: {
+    style: solid;
+    width: 1px;
+    color: $zorba;
+  }
+
+  &:focus,
+  &.isFocused {
+    outline: none;
+    border: {
+      color: $steelBlue;
+    }
+    box-shadow: inset 0 0 0 1px $steelBlue;
+    color: $steelBlue;
+  }
+
+}

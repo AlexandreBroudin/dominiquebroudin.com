@@ -1,0 +1,141 @@
+---
+title: Styleguide
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+
+%html{lang: "en"}
+  %head
+  %meta{charset: "utf-8"}
+  %title {{ site.name }}
+  %meta{name: "keywords", value: "{{ site.meta_keywords }}"}
+  %meta{name: "description", value: "{{ site.meta_description }}"}
+  {{ 'style.css' | stylesheet_tag }}
+  {{ 'styleguide.css' | stylesheet_tag }}
+  %body
+    .Container.Container--fixed
+      .row
+        .c.c-4
+          %h1.Headline-1 {{ page.title }}
+      .row
+        .c.c-4
+          %h2.sg-Headline-2 Grid
+          %p
+            4 columns, 980px width, 25% column width
+      .row
+        .c.c-1.sg-Grid-cell
+        .c.c-1.sg-Grid-cell
+        .c.c-1.sg-Grid-cell
+        .c.c-1.sg-Grid-cell
+      .row
+        .c.c-2.sg-Grid-cell
+        .c.c-2.sg-Grid-cell
+      .row
+        .c.c-3.sg-Grid-cell
+        .c.c-1.sg-Grid-cell
+      .row
+        .c.c-4.sg-Grid-cell
+
+      .row
+        .c.c-4
+          %h2.sg-Headline-2 Colors
+          %p Only 4 colors
+      .row
+        .c.c-1.sg-Color-cell.sg-Color-cell--1
+        .c.c-1.sg-Color-cell.sg-Color-cell--2
+        .c.c-1.sg-Color-cell.sg-Color-cell--3
+        .c.c-1.sg-Color-cell.sg-Color-cell--4
+      .row
+        .c.c-1.sg-Cell
+          2px borders 30% opacity of $zobar, $ironsideGray
+        .c.c-1.sg-Cell
+          Labels, Alternate texts, input borders $zorba
+        .c.c-1.sg-Cell
+          Text $westar
+        .c.c-1.sg-Cell
+          Links, input focus borders
+
+
+      .row
+        .c.c-4
+          %h2.sg-Headline-2 Typography
+          %p Everything is REMified
+      .row
+        .c.c-1.sg-Headline-3
+          Small title label
+        .c.c-3.sg-Cell.Label
+          Montserrat 14pt
+      .row
+        .c.c-1.sg-Headline-3
+          Headlines
+        .c.c-3.Headline-2
+          Libre Baskerville 47pt
+      .row
+        .c.c-1
+        .c.c-3.Headline-2
+          Libre Baskerville 32pt
+      .row
+        .c.c-1
+        .c.c-3.Headline-3
+          Libre Baskerville 21pt
+      .row
+        .c.c-1.sg-Headline-3
+          Body text
+        .c.c-3.sg-Cell
+          Libre Baskerville 14pt  -  lineheight 24pt <br/>
+          Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+      .row
+        .c.c-4
+          %h2.sg-Headline-2 Forms
+      .row
+        .c.c-1.sg-Headline-3
+          Input big and small
+        .c.c-3.sg-Cell
+          {% include 'input' with type: "text", placeholder: 'Placeholder' %}
+          {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 's' %}
+      .row
+        .c.c-1.sg-Headline-3
+          Disabled
+        .c.c-3.sg-Cell
+          {% include 'input' with type: "text", placeholder: 'Placeholder', disabled: true %}
+      .row
+        .c.c-1.sg-Headline-3
+          Focused
+        .c.c-3.sg-Cell
+          {% include 'input' with type: "text", focused: true, placeholder: 'Placeholder' %}
+      .row
+        .c.c-1.sg-Headline-3
+          Buttons
+        .c.c-3.sg-Cell
+          {% include 'button' with value: 'Button' %}
+          {% include 'button' with value: 'Submit', modifier: 'validate' %}
+      .row
+        .c.c-1.sg-Headline-3
+          Dropdown
+        .c.c-3.sg-Cell
+          .Dropdown
+            %select.Dropdown-Select
+              %option{:value => "Lorem"} Lorem
+              %option{:value => "Ipsum"} Ipsum
+              %option{:value => "Dolor"} Dolor
