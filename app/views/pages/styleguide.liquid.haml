@@ -106,6 +106,13 @@ published: true
 
       .row
         .c.c-4
+          %h2.sg-Headline-2 Navigation
+      .row
+        .c.c-1
+        .c.c-3.sg-Cell
+          {% include 'navigation' %}
+      .row
+        .c.c-4
           %h2.sg-Headline-2 Forms
       .row
         .c.c-1.sg-Headline-3
@@ -113,6 +120,11 @@ published: true
         .c.c-3.sg-Cell
           {% include 'input' with type: "text", placeholder: 'Placeholder' %}
           {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 's' %}
+      .row
+        .c.c-1.sg-Headline-3
+          Input on dark background
+        .c.c-3.sg-Cell.sg-darkBackground
+          {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 'light' %}
       .row
         .c.c-1.sg-Headline-3
           Input block
@@ -133,6 +145,14 @@ published: true
             .InputGroup-Addon
               {% include 'button' with value: 'Button', class: 'InputGroup-Button' %}
             {% include 'input' with type: "text", placeholder: 'Placeholder', class: 'InputGroup-Input' %}
+      .row
+        .c.c-1.sg-Headline-3
+          Input group on dark background
+        .c.c-3.sg-Cell.sg-darkBackground
+          .InputGroup
+            {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 'light', class: 'InputGroup-Input' %}
+            .InputGroup-Addon
+              {% include 'button' with value: 'Button', modifier: 'light', class: 'InputGroup-Button' %}
       .row
         .c.c-1.sg-Headline-3
           Disabled

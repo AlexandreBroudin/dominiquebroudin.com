@@ -1,0 +1,43 @@
+.Navigation {
+  border-bottom: 1px solid $zorba;
+}
+
+.Navigation-Link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  padding: 0 $paddingM;
+  display: inline-block;
+  color: $zorba;
+}
+
+.Navigation-LinkText {
+  padding: $paddingM 0;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    background: transparent;
+    transition: .1s ease-in-out all;
+  }
+
+  &:hover {
+    color: $steelBlue;
+
+    &:after {
+      height: 3px;
+      left: 0;
+      right: 0;
+      background: $steelBlue;
+    }
+
+  }
+
+}
