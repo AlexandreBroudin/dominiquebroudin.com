@@ -75,7 +75,6 @@ published: true
         .c.c-1.sg-Cell
           Links, input focus borders
 
-
       .row
         .c.c-4
           %h2.sg-Headline-2 Typography
@@ -114,6 +113,26 @@ published: true
         .c.c-3.sg-Cell
           {% include 'input' with type: "text", placeholder: 'Placeholder' %}
           {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 's' %}
+      .row
+        .c.c-1.sg-Headline-3
+          Input block
+        .c.c-3.sg-Cell
+          {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 'block' %}
+      .row
+        .c.c-1.sg-Headline-3
+          Input group
+        .c.c-3.sg-Cell
+          .InputGroup
+            {% include 'input' with type: "text", placeholder: 'Placeholder', class: 'InputGroup-Input' %}
+            .InputGroup-Addon
+              {% include 'button' with value: 'Button', class: 'InputGroup-Button' %}
+      .row
+        .c.c-1
+        .c.c-3.sg-Cell
+          .InputGroup
+            .InputGroup-Addon
+              {% include 'button' with value: 'Button', class: 'InputGroup-Button' %}
+            {% include 'input' with type: "text", placeholder: 'Placeholder', class: 'InputGroup-Input' %}
       .row
         .c.c-1.sg-Headline-3
           Disabled
