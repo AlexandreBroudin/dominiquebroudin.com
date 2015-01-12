@@ -11,8 +11,5 @@
     "node": ">= 0.10.0"
   },
   "author": "Alexandre Broudin",
-  "license": "MIT",
-  "devDependencies": {
-    "node-styleguide": "onaliugo/node-styleguide"
-  }
+  "license": "MIT"
 }
