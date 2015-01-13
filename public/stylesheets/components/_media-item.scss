@@ -1,0 +1,36 @@
+.MediaItems {
+  padding: 0;
+  margin: 0 -30px;
+  font-size: 0;
+  text-align: center;
+}
+
+.MediaItem {
+  font-size: $baseFontSize;
+  width: 25%;
+  padding: 0 30px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: $marginXXL;
+  text-align: left;
+
+  &:hover {
+    opacity: .9;
+  }
+
+}
+
+.MediaItem-Image {
+  width: 100%;
+  margin-bottom: $marginM;
+}
+
+.MediaItem-Link {
+  text-decoration: none;
+  color: $ironsideGray;
+
+  &:hover {
+    color: $steelBlue;
+  }
+
+}
