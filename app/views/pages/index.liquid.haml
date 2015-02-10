@@ -11,8 +11,25 @@ published: true
   %meta{name: "description", value: "{{ site.meta_description }}"}
   {{ 'style.css' | stylesheet_tag }}
   %body
-  %h1 {{ page.title }}
-  {% block 'main' %}
-  %p Lorem ipsum....
-  {% endblock %}
-  %a{:href => "styleguide"} styleguide
+    %header.HomeHeader
+      .InputGroup.SearchForm
+        {% include 'input' with type: "text", placeholder: 'Placeholder', class: 'InputGroup-Input' %}
+        .InputGroup-addOn
+          {% include 'button' with value: 'Button', class: 'InputGroup-Button' %}
+      %h1.HomeHeader-title.Headline--giga
+        %span.HomeHeader-titleText
+          {{ site.name }}
+      {% include 'navigation' %}
+    .Container.Container--fixed
+      %section.MediaItems-container
+        .SectionTitle.Label
+          Derniers ajouts
+        .row
+          %ul.MediaItems
+            {% include 'media-item' with modifier: "big" %}
+            {% include 'media-item' with modifier: "big"  %}
+            {% include 'media-item' %}
+            {% include 'media-item' %}
+            {% include 'media-item' %}
+            {% include 'media-item' %}
+      {% include 'footer' %}

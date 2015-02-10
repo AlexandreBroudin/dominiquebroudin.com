@@ -10,14 +10,14 @@
   float: left;
 }
 
-.InputGroup-Addon {
+.InputGroup-addOn {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle;
   display: table-cell;
 }
 
-.InputGroup-Addon:last-child {
+.InputGroup-addOn:last-child {
 
   .InputGroup-Button {
     border-left: none;
@@ -25,7 +25,7 @@
 
 }
 
-.InputGroup-Addon:first-child {
+.InputGroup-addOn:first-child {
 
   .InputGroup-Button {
     border-right: none;

@@ -25,7 +25,11 @@
 @import "components/dropdown";
 @import "components/navigation";
 @import "components/media-item";
+@import "components/list";
 
 // Layouts
 @import "layout/global";
 @import "layout/type";
+@import "layout/header";
+@import "layout/search-form";
+@import "layout/footer";

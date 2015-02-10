@@ -1,0 +1,21 @@
+.Footer-columns {
+  margin: 0 -30px;
+}
+
+.Footer-column {
+  padding: 0 30px;
+}
+
+.Footer-columnHeaderLabel {
+  text-transform: uppercase;
+  color: $zorba;
+  font-weight: normal;
+}
+
+.Footer-list {
+  margin-top: $baseLineHeight;
+}
+
+.Footer-smallLabel {
+  font-size: rem(12px);
+}

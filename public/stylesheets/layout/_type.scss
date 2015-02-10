@@ -13,9 +13,18 @@ body {
   line-height: $baseLineHeight;
 }
 
+p {
+  margin: $baseLineHeight 0;
+}
+
 .Label {
   font-family: 'Montserrat', sans-serif;
   font-size: rem(14px);
+}
+
+.Headline--giga {
+  font-size: rem(71px);
+  line-height: rem(72px);
 }
 
 .Headline-1 {
@@ -44,4 +53,27 @@ body {
   line-height: rem(24px);
   margin-top: rem(24px);
   margin-bottom: rem(24px);
+}
+
+.SectionTitle {
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  color: $zorba;
+  padding-top: $paddingM;
+  font-weight: normal;
+  position: relative;
+  margin: $marginXL 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background: $zorba;
+    left: 50%;
+    margin-left: -10px;
+    top: 0;
+  }
+
 }
