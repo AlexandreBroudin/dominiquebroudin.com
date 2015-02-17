@@ -11,27 +11,30 @@ published: true
   %meta{name: "description", value: "{{ site.meta_description }}"}
   {{ 'style.css' | stylesheet_tag }}
   %body
+    {% block header %}
     %header.HomeHeader
       .InputGroup.SearchForm
-        {% include 'input' with type: "text", placeholder: 'Placeholder', class: 'InputGroup-Input' %}
+        {% include 'input' with type: "text", placeholder: 'Rerchercher un objet en particulier', class: 'InputGroup-Input' %}
         .InputGroup-addOn
-          {% include 'button' with value: 'Button', class: 'InputGroup-Button' %}
+          {% include 'button' with value: 'Rechercher', class: 'InputGroup-Button' %}
       %h1.HomeHeader-title.Headline--giga
         %span.HomeHeader-titleText
           {{ site.name }}
       {% include 'navigation' %}
+    {% endblock %}
     .Container.Container--fixed
+      {% block main %}
       %section.MediaItems-container
-        {% block main %}
         .SectionTitle.Label
           Derniers ajouts
         .row
           %ul.MediaItems
             {% for object in contents.objects limit:2 %}
+            {{ object.category.title }}
             {% include 'media-item' with modifier: "big"  %}
             {% endfor %}
             {% for object in contents.objects offset:2 %}
             {% include 'media-item' %}
             {% endfor %}
-        {% endblock %}
+      {% endblock %}
       {% include 'footer' %}

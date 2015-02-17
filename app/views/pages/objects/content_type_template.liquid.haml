@@ -3,7 +3,19 @@ title: Event template page
 content_type: objects
 ---
 {% extends 'index' %}
+{% block header %}
+%header
+  .InputGroup.SearchForm
+    {% include 'input' with type: "text", placeholder: 'Rerchercher un objet en particulier', class: 'InputGroup-Input' %}
+    .InputGroup-addOn
+      {% include 'button' with value: 'Rechercher', class: 'InputGroup-Button' %}
+  {% include 'navigation' %}
+{% endblock %}
 {% block main %}
-<h1>{{ object.title }} on {{ object.date | localized_date: '%m/%d/%Y' }}</h1>
+.Label
+  {{ object.category.title }}
+%h1.Headline-1.u-tac
+  {{ object.title }}
+{{ object.date | localized_date: '%m/%d/%Y' }}
 <p>{{ object.description }}</p>
 {% endblock %}

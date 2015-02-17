@@ -1,8 +1,8 @@
 # Human readable name of this type
-name: Objects
+name: Categories
 
 # Lowercase, underscored handle used to access this type
-slug: objects
+slug: categories
 
 # Explanatory text displayed in the back-office
 description: A description of the content type for the editors
@@ -34,21 +34,6 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 
-- date: # The lowercase, underscored name of the field
-    label: Date # Human readable name of the field
-    type: date
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
-
-- description: # The lowercase, underscored name of the field
-    label: Description # Human readable name of the field
-    type: text
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
-    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
-
 - body: # The lowercase, underscored name of the field
     label: Body # Human readable name of the field
     type: text
@@ -64,8 +49,10 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 
-- category:
-    label: Category
+- objects:
+    label: Objects
     hint: A description of the relationship for the editors
-    type: belongs_to
-    class_name: categories
+    type: has_many
+    class_name: objects
+    inverse_of: category
+    ui_enabled: true
