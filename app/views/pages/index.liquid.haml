@@ -22,14 +22,16 @@ published: true
       {% include 'navigation' %}
     .Container.Container--fixed
       %section.MediaItems-container
+        {% block main %}
         .SectionTitle.Label
           Derniers ajouts
         .row
           %ul.MediaItems
-            {% include 'media-item' with modifier: "big" %}
+            {% for object in contents.objects limit:2 %}
             {% include 'media-item' with modifier: "big"  %}
+            {% endfor %}
+            {% for object in contents.objects offset:2 %}
             {% include 'media-item' %}
-            {% include 'media-item' %}
-            {% include 'media-item' %}
-            {% include 'media-item' %}
+            {% endfor %}
+        {% endblock %}
       {% include 'footer' %}

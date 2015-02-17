@@ -1,0 +1,9 @@
+---
+title: Event template page
+content_type: objects
+---
+{% extends 'index' %}
+{% block main %}
+<h1>{{ object.title }} on {{ object.date | localized_date: '%m/%d/%Y' }}</h1>
+<p>{{ object.description }}</p>
+{% endblock %}

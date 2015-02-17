@@ -1,0 +1,37 @@
+- "Sample 1":
+    date: 2015/02/17 # YYYY/MM/DD
+    description: "In ut sed numquam iusto non. Perferendis sed eum deleniti doloribus maxime ut aliquid mollitia. Voluptatem iste totam vel et sit."
+    body: "Id vel in dignissimos harum fugiat non. Sint quasi iure optio. Est et aliquam earum. Voluptatem dolores sed repellendus ut corporis doloremque nisi."
+    photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    date: 2015/02/17 # YYYY/MM/DD
+    description: "Numquam voluptatum qui ducimus architecto cupiditate et earum. Similique aut ex iusto voluptas. Facilis id nesciunt doloribus."
+    body: "Laboriosam consequuntur impedit aperiam itaque. Placeat et expedita eum commodi. Excepturi explicabo eius ut."
+    photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    date: 2015/02/17 # YYYY/MM/DD
+    description: "Voluptates eum enim voluptatibus enim accusantium qui id ipsa. Repellat ea qui amet deserunt et adipisci. Tenetur magnam quo accusamus rerum et excepturi nobis. Amet saepe ducimus provident dolor aliquid."
+    body: "Delectus ratione nesciunt voluptates. Ipsam repellendus nemo eveniet quis tempora vitae molestiae a. Assumenda earum sunt quisquam."
+    photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    date: 2015/02/17 # YYYY/MM/DD
+    description: "Accusantium illo qui et. Aspernatur et quo non perspiciatis consequatur consectetur. Ex sequi omnis voluptatem repudiandae aut est et."
+    body: "Sequi inventore sed omnis excepturi dolorem voluptas. Voluptatibus dolore vel tempore voluptates architecto animi aliquid. Qui facilis asperiores explicabo. Numquam ab officiis asperiores magni nesciunt."
+    photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
+
+
+- "Sample 5":
+    date: 2015/02/17 # YYYY/MM/DD
+    description: "Voluptates eum enim voluptatibus enim accusantium qui id ipsa. Repellat ea qui amet deserunt et adipisci. Tenetur magnam quo accusamus rerum et excepturi nobis. Amet saepe ducimus provident dolor aliquid."
+    body: "Delectus ratione nesciunt voluptates. Ipsam repellendus nemo eveniet quis tempora vitae molestiae a. Assumenda earum sunt quisquam."
+    photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 6":
+    date: 2015/02/17 # YYYY/MM/DD
+    description: "Accusantium illo qui et. Aspernatur et quo non perspiciatis consequatur consectetur. Ex sequi omnis voluptatem repudiandae aut est et."
+    body: "Sequi inventore sed omnis excepturi dolorem voluptas. Voluptatibus dolore vel tempore voluptates architecto animi aliquid. Qui facilis asperiores explicabo. Numquam ab officiis asperiores magni nesciunt."
+    photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
+
