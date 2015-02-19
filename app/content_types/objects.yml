@@ -26,7 +26,7 @@ order_by: manually
 # public_submission_accounts: ['john@example.com']
 
 # A list describing each field
-fields: 
+fields:
 - title: # The lowercase, underscored name of the field
     label: Title # Human readable name of the field
     type: string
@@ -66,6 +66,6 @@ fields:
 
 - category:
     label: Category
-    hint: A description of the relationship for the editors
     type: belongs_to
+    hint: A description of the relationship for the editors
     class_name: categories

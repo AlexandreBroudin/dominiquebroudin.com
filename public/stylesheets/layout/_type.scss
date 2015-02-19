@@ -20,6 +20,20 @@ p {
 .Label {
   font-family: 'Montserrat', sans-serif;
   font-size: rem(14px);
+
+  + .Headline {
+    margin-top: 0;
+  }
+
+}
+
+.Label-headline {
+  margin-top: $marginXXL;
+  text-align: center;
+  text-transform: uppercase;
+  color: $zorba;
+  display: block;
+  text-decoration: none;
 }
 
 .Headline--giga {

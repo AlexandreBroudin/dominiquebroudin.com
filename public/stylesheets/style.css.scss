@@ -12,9 +12,6 @@
 
 // Helpers
 @import "helpers/clearfix";
-
-// Utilities
-@import "utilities/utility-classes";
 @import "utilities/placeholder";
 
 // Components
@@ -31,5 +28,9 @@
 @import "layout/global";
 @import "layout/type";
 @import "layout/header";
+@import "layout/article";
 @import "layout/search-form";
 @import "layout/footer";
+
+// Utilities
+@import "utilities/utility-classes";

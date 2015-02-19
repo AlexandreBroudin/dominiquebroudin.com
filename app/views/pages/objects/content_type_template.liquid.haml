@@ -1,6 +1,6 @@
 ---
 title: Event template page
-content_type: objects
+content_type: "objects"
 ---
 {% extends 'index' %}
 {% block header %}
@@ -12,10 +12,19 @@ content_type: objects
   {% include 'navigation' %}
 {% endblock %}
 {% block main %}
-.Label
+%a.Label.Label-headline{:href => "/category/{{ object.category._slug }}"}
   {{ object.category.title }}
-%h1.Headline-1.u-tac
+%h1.Headline.Headline-1.u-tac.u-mb--xxl
   {{ object.title }}
-{{ object.date | localized_date: '%m/%d/%Y' }}
-<p>{{ object.description }}</p>
+.row.Article
+  .c.c-2
+    .Date.u-mb--m
+      {{ object.date | localized_date: '%m/%d/%Y' }}
+    .Description.u-mb--m
+      {{ object.description }}
+    .Text
+      {{ object.body }}
+  .c.c-2
+    %img.MediaItem-Image{:src => "{{ object.photo.url }}", :alt => ""}/
+
 {% endblock %}
