@@ -9,6 +9,7 @@
     description: "Numquam voluptatum qui ducimus architecto cupiditate et earum. Similique aut ex iusto voluptas. Facilis id nesciunt doloribus."
     body: "Laboriosam consequuntur impedit aperiam itaque. Placeat et expedita eum commodi. Excepturi explicabo eius ut."
     photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
+    category: Sample 2
 
 - "Sample 3":
     date: 2015/02/17 # YYYY/MM/DD
@@ -34,5 +35,5 @@
     date: 2015/02/17 # YYYY/MM/DD
     description: "Accusantium illo qui et. Aspernatur et quo non perspiciatis consequatur consectetur. Ex sequi omnis voluptatem repudiandae aut est et."
     body: "Sequi inventore sed omnis excepturi dolorem voluptas. Voluptatibus dolore vel tempore voluptates architecto animi aliquid. Qui facilis asperiores explicabo. Numquam ab officiis asperiores magni nesciunt."
-    photo: http://placehold.it/460x415 # Path to a file in the public/samples folder or to a remote and external file.
-
+    photo: http://placekitten.com/200/180 # Path to a file in the public/samples folder or to a remote and external file.
+    category: Sample 2

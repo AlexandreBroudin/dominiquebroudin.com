@@ -12,9 +12,16 @@ content_type: "categories"
   {% include 'navigation' %}
 {% endblock %}
 {% block main %}
+%h1.Headline.Headline-1.u-tac.u-mb--xxl
+  {{ category.title }}
 .row.u-mt--l
+  {% if category.objects == empty %}
+  %p.u-tac.u-mb--xxl
+    Nothing here
+  {% else %}
   %ul.MediaItems
     {% for object in category.objects %}
     {% include 'media-item' %}
     {% endfor %}
+  {% endif %}
 {% endblock %}
