@@ -1,0 +1,13 @@
+<li class="MediaItem{% if modifier %} MediaItem--{{modifier}}{% endif %}">
+  <a href="/categories/{{ category._slug }}" class="MediaItem-Link">
+    <img class="MediaItem-Image" src="{{ category.photo.url }}" alt="">
+  </a>
+  <a href="/categories/{{ category._slug }}" class="MediaItem-Link">
+    <div class="MediaItem-Title">{{ category.title }}</div>
+  </a>
+  <p class="MediaItem-Description">
+    <a href="/categories/{{ category._slug }}" class="MediaItem-Link">
+      {{ category.description }}
+    </a>
+  </p>
+</li>

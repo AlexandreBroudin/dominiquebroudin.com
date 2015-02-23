@@ -1,0 +1,20 @@
+---
+title: Category template page
+content_type: "categories"
+---
+{% extends 'index' %}
+{% block header %}
+%header
+  .InputGroup.SearchForm
+    {% include 'input' with type: "text", placeholder: 'Rerchercher un objet en particulier', class: 'InputGroup-Input' %}
+    .InputGroup-addOn
+      {% include 'button' with value: 'Rechercher', class: 'InputGroup-Button' %}
+  {% include 'navigation' %}
+{% endblock %}
+{% block main %}
+.row.u-mt--l
+  %ul.MediaItems
+    {% for object in category.objects %}
+    {% include 'media-item' %}
+    {% endfor %}
+{% endblock %}

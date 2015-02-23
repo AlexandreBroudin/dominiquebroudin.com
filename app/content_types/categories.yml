@@ -34,6 +34,14 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 
+- description: # The lowercase, underscored name of the field
+    label: Description # Human readable name of the field
+    type: text
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: false
+    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+
 - body: # The lowercase, underscored name of the field
     label: Body # Human readable name of the field
     type: text

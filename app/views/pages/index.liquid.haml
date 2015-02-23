@@ -30,7 +30,7 @@ published: true
         .row
           %ul.MediaItems
             {% for object in contents.objects limit:2 %}
-            {% include 'media-item' with modifier: "big"  %}
+            {% include 'media-item' with modifier: "big" %}
             {% endfor %}
             {% for object in contents.objects offset:2 %}
             {% include 'media-item' %}

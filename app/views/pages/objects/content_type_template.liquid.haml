@@ -12,7 +12,7 @@ content_type: "objects"
   {% include 'navigation' %}
 {% endblock %}
 {% block main %}
-%a.Label.Label-headline{:href => "/category/{{ object.category._slug }}"}
+%a.Label.Label-headline{:href => "/categories/{{ object.category._slug }}"}
   {{ object.category.title }}
 %h1.Headline.Headline-1.u-tac.u-mb--xxl
   {{ object.title }}
