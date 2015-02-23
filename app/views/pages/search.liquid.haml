@@ -1,9 +1,8 @@
 ---
-title: categories
-
+title: search
+handle: search
 # true if the page is included in the menu
 listed: true
-
 # true if the page is published
 published: true
 
@@ -30,10 +29,32 @@ published: true
   {% include 'navigation' %}
 {% endblock %}
 {% block main %}
-.row.u-mt--l
-  %ul.MediaItems
-    {% for category in contents.categories %}
-    {% include 'media-item-categories' %}
-    {% endfor %}
+{% if params.query == '' or params.query == nil %}
+Sorry, no results were found.
+{% else %}
 
+{% search_for params.query, per_page: 10, page: params.page %}
+
+{% if result.total_entries == 0 %}
+Sorry, no results were found.
+{% else %}
+
+{{ search.total_entries }} elements found.
+{% for result in search.results %}
+%a{:href => "/{{result.fullpath}}"}
+  {{ result.title }}
+{{ result.highlighted.searchable_content }}
+
+{% endfor %}
+{% if search.total_pages > params.page %}
+%a{:href => "?page={{ params.page | plus: 1 }}&query={{ params.query }}"}
+  Next page
+{% endif %}
+
+{% endif %}
+
+{% endsearch_for %}
+
+
+{% endif %}
 {% endblock %}

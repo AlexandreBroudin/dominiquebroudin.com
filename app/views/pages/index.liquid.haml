@@ -13,10 +13,7 @@ published: true
   %body
     {% block header %}
     %header.HomeHeader
-      .InputGroup.SearchForm
-        {% include 'input' with type: "text", placeholder: 'Rerchercher un objet en particulier', class: 'InputGroup-Input' %}
-        .InputGroup-addOn
-          {% include 'button' with value: 'Rechercher', class: 'InputGroup-Button' %}
+      {% include 'searchbar' %}
       %h1.HomeHeader-title.Headline--giga
         %span.HomeHeader-titleText
           {{ site.name }}

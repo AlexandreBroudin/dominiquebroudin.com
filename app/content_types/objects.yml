@@ -33,6 +33,7 @@ fields:
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
+    searchable: true
 
 - date: # The lowercase, underscored name of the field
     label: Date # Human readable name of the field
