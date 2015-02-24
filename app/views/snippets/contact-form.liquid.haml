@@ -1,0 +1,32 @@
+#contact.ContactForm
+  .Label.Footer-columnHeaderLabel Contact
+  %p
+    Une question, une requete ?
+    %br
+    Contactez-moi !
+  %form{:action => "{{contents.contact_form.public_submission_url}}", :method => "POST"}
+    {% csrf_param %}
+    %input{:type => "hidden", :value => "/", :name => "success_callback"}/
+    %input{:type => "hidden", :value => "/contact", :name => "error_callback"}/
+
+    {% if contact_form.errors %}
+    The following errors occured:
+    {% for error in contact_form.errors %}
+    {{error[0] | capitalize}} -  {{error[1]}}
+    {% endfor %}
+    {% endif %}
+    %label.Label.u-bloc{:for => "content[name]"}
+      Name
+    %input.Input.Input--block{:type => "text", :id => "content[name]", :name => "content[name]", :value => "{{contact_form.name}}"}/
+    %label.Label.u-bloc.u-mt{:for => "content[email]"}
+      Email
+    %input.Input.Input--block{:type => "text", :id => "content[email]", :name => "content[email]", :value => "{{contact_form.email}}"}/
+    %label.Label.u-bloc.u-mt{:for => "content[subject]"}
+      Subject
+    %input.Input.Input--block{:type => "text", :id => "content[subject]", :name => "content[subject]", :value => "{{contact_form.subject}}"}/
+    %label.Label.u-bloc.u-mt{:for => "content[body]"}
+      Message
+    %textarea.Input.Input--block{:name => "content[body]", :rows => "3"}
+      {{contact_form.body}}
+    .u-tar.u-mt
+      %input.Button.Button--validate{:type => "submit"}/

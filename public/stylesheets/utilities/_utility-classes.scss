@@ -8,6 +8,14 @@
   text-align: center;
 }
 
+.u-tar {
+  text-align: right;
+}
+
+.u-bloc {
+  display: block;
+}
+
 .u-ttu {
   text-transform: uppercase;
 }
@@ -22,4 +30,8 @@
 
 .u-mt--l {
   margin-top: $marginL;
+}
+
+.u-mt {
+  margin-top: $marginM;
 }

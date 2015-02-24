@@ -1,38 +1,37 @@
-.Footer
-  .row.Footer-columns
-    .c.c-1
-      .Footer-column
-        .Label.Footer-columnHeaderLabel About
-        %p
-          Dominique Broudin
-        %p
-          Baldessari’s work was central to the growth of Conceptual Art in the 1960s and '70s
+.Footer.row
+  .c.c-2
+    {% include 'contact-form' %}
+  .c.c-2
+    .row
+      .c.c-2
+        .Footer-column
+          .Label.Footer-columnHeaderLabel About
+          %p
+            Dominique Broudin
+          %p
+            Baldessari’s work was central to the growth of Conceptual Art in the 1960s and '70s
 
-    .c.c-1
-      .Footer-column
-        .Label.Footer-columnHeaderLabel Categories
-        %ul.List.Footer-list
-          %li.List-item
-            %a{:href => ""} Medecine
-          %li.List-item
-            %a{:href => ""} Tenues
-          %li.List-item
-            %a{:href => ""} Armes
-          %li.List-item
-            %a{:href => ""} Divers
-    .c.c-1
-      .Footer-column
-        .Label.Footer-columnHeaderLabel Share it
-        %ul.List.Footer-list
-          %li.List-item
-            %a{:href => ""} Facebook
-          %li.List-item
-            %a{:href => ""} Twitter
-          %li.List-item
-            %a{:href => ""} Google+
-          %li.List-item
-            %a{:href => ""} Email
-    .c.c-1
-      .Footer-column
-        .Label.Footer-columnHeaderLabel.Footer-smallLabel
-          {{ site.name }}
+      .c.c-2
+        .Footer-column
+          .Label.Footer-columnHeaderLabel Categories
+          %ul.List.Footer-list
+            %li.List-item
+              %a{:href => ""} Medecine
+            %li.List-item
+              %a{:href => ""} Tenues
+            %li.List-item
+              %a{:href => ""} Armes
+            %li.List-item
+              %a{:href => ""} Divers
+
+        .Footer-column
+          .Label.Footer-columnHeaderLabel Share it
+          %ul.List.Footer-list
+            %li.List-item
+              %a{:href => ""} Facebook
+            %li.List-item
+              %a{:href => ""} Twitter
+            %li.List-item
+              %a{:href => ""} Google+
+            %li.List-item
+              %a{:href => ""} Email
