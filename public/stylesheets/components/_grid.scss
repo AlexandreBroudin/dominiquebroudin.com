@@ -1,21 +1,24 @@
 .Container {
   width: 100%;
-}
-
-.Container--fixed {
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
-.row {
-  @include cf();
+.Row {
+  font-size: 0;
 }
 
-.c {
-  float: left;
+.Column {
+  display: inline-block;
   min-height: 1px;
   position: relative;
   word-wrap: break-word;
+  vertical-align: top;
+  font-size: $baseFontSize;
+
+  &.Row {
+    font-size: 0;
+  }
 }
 
 // Generate columns
@@ -27,12 +30,29 @@
       $cols: join($classes, unquote(".col#{$grid}-#{$i}"), comma);
     }
   }
-  .c-#{$i} {
+  .Column-#{$i} {
     width: percentage(( $i / $columnNumber));
     @if $i == 12 {
       float: none;
       width: auto;
     }
+  }
+}
 
+@media (max-width: 768px) {
+  @for $i from 1 to ($columnNumber + 1) {
+    @each $grid in $grids {
+      $classes: join($classes, unquote(".col#{$grid}-#{$i}"), comma);
+      @if $i < $columnNumber {
+        $cols: join($classes, unquote(".col#{$grid}-#{$i}"), comma);
+      }
+    }
+    .Column-small-#{$i} {
+      width: percentage(( $i / $columnNumber));
+      @if $i == 12 {
+        float: none;
+        width: auto;
+      }
+    }
   }
 }

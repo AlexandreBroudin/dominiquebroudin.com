@@ -1,9 +1,7 @@
 #contact.ContactForm
-  .Label.Footer-columnHeaderLabel Contact
+  .Label.Footer-columnHeaderLabel {{ 'Contact' | translate }}
   %p
-    Une question, une requete ?
-    %br
-    Contactez-moi !
+    {{ 'contact_description' | translate }}
   %form{:action => "{{contents.contact_form.public_submission_url}}", :method => "POST"}
     {% csrf_param %}
     %input{:type => "hidden", :value => "/", :name => "success_callback"}/
@@ -16,17 +14,17 @@
     {% endfor %}
     {% endif %}
     %label.Label.u-bloc{:for => "content[name]"}
-      Name
+      {{ 'Name' | translate }}
     %input.Input.Input--block{:type => "text", :id => "content[name]", :name => "content[name]", :value => "{{contact_form.name}}"}/
     %label.Label.u-bloc.u-mt{:for => "content[email]"}
-      Email
+      {{ 'Email' | translate }}
     %input.Input.Input--block{:type => "text", :id => "content[email]", :name => "content[email]", :value => "{{contact_form.email}}"}/
     %label.Label.u-bloc.u-mt{:for => "content[subject]"}
-      Subject
+      {{ 'Subject' | translate }}
     %input.Input.Input--block{:type => "text", :id => "content[subject]", :name => "content[subject]", :value => "{{contact_form.subject}}"}/
     %label.Label.u-bloc.u-mt{:for => "content[body]"}
-      Message
+      {{ 'Message' | translate }}
     %textarea.Input.Input--block{:name => "content[body]", :rows => "3"}
       {{contact_form.body}}
     .u-tar.u-mt
-      %input.Button.Button--validate{:type => "submit"}/
+      %input.Button.Button--validate.Column.Column-small-4{:type => "submit", :value => "{{ 'Submit' | translate }}"}/

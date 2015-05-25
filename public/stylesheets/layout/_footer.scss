@@ -1,12 +1,9 @@
 .Footer {
   margin-bottom: $marginXXL;
 }
-.Footer-columns {
-  margin: 0 -30px;
-}
 
 .Footer-column {
-  padding: 0 30px;
+  padding: 0 $marginM;
 }
 
 .Footer-columnHeaderLabel {

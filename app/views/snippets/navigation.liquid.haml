@@ -1,19 +1,19 @@
-%nav.Navigation.u-tac
-  %a{:href => "/", :class => "Navigation-Link"}
+%nav.Navigation
+  %a{:href => "/", :class => "Navigation-Link Navigation-Link--home"}
     %span.Navigation-LinkText
-      Accueil
-  %a{:href => "/categories", :class => "Navigation-Link"}
+      {{ 'Home' | translate }}
+  %a{:href => "/categories", :class => "Navigation-Link Navigation-Link--gallery"}
     %span.Navigation-LinkText
-      Galerie
-  %a{:href => "", :class => "Navigation-Link"}
+      {{ 'Galery' | translate }}
+  %a{:href => "", :class => "Navigation-Link Navigation-Link--press"}
     %span.Navigation-LinkText
-      Presse
-  %a{:href => "", :class => "Navigation-Link"}
+      {{ 'Press' | translate }}
+  %a{:href => "#about", :class => "Navigation-Link Navigation-Link--about"}
     %span.Navigation-LinkText
-      A Propos
-  %a{:href => "#contact", :class => "Navigation-Link"}
+      {{ 'About' | translate }}
+  %a{:href => "#contact", :class => "Navigation-Link Navigation-Link--contact"}
     %span.Navigation-LinkText
-      Contact
-  %a{:href => "", :class => "Navigation-Link"}
+      {{ 'Contact' | translate }}
+  %a{:href => "", :class => "Navigation-Link Navigation-Link--search"}
     %span.Navigation-LinkText
-      Recherche
+      {{ 'Search' | translate }}

@@ -6,31 +6,31 @@ published: true
 %html{lang: "en"}
   %head
   %meta{charset: "utf-8"}
-  %title {{ site.name }}
+  %title {{ site.seo_title  }}
   %meta{name: "keywords", value: "{{ site.meta_keywords }}"}
   %meta{name: "description", value: "{{ site.meta_description }}"}
+  %meta{name: "viewport", content: "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
   {{ 'style.css' | stylesheet_tag }}
   %body
     {% block header %}
-    %header.HomeHeader
+    %header.Header.HomeHeader
+      %h1.Header-title
+        %a.Header-titleText{:href => "/"}
+          {{ 'site_name' | translate }}
       {% include 'searchbar' %}
-      %h1.HomeHeader-title.Headline--giga
-        %span.HomeHeader-titleText
-          {{ site.name }}
       {% include 'navigation' %}
     {% endblock %}
     .Container.Container--fixed
       {% block main %}
       %section.MediaItems-container
         .SectionTitle.Label
-          Derniers ajouts
-        .row
-          %ul.MediaItems
-            {% for object in contents.objects limit:2 %}
-            {% include 'media-item' with modifier: "big" %}
-            {% endfor %}
-            {% for object in contents.objects offset:2 %}
-            {% include 'media-item' %}
-            {% endfor %}
+          {{ 'recently_added' | translate }}
+        %ul.Row.MediaItems
+          {% for object in contents.objects limit:2 %}
+          {% include 'media-item', with modifier: "2", smallModifier: "4"  %}
+          {% endfor %}
+          {% for object in contents.objects offset:2 %}
+          {% include 'media-item', with modifier: "1", smallModifier: "4" %}
+          {% endfor %}
       {% endblock %}
       {% include 'footer' %}

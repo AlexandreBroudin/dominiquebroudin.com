@@ -1,5 +1,9 @@
 .Navigation {
   border-bottom: 1px solid $zorba;
+  text-align: center;
+  background: $white;
+  position: relative;
+  border-radius: 3px 3px 0 0;
 }
 
 .Navigation-Link {
@@ -7,13 +11,14 @@
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  padding: 0 $paddingM;
+  padding: 0 $paddingS;
   display: inline-block;
   color: $zorba;
+  font-size: rem(13px);
 }
 
 .Navigation-LinkText {
-  padding: $paddingM 0;
+  padding: $paddingS 0;
   display: inline-block;
   position: relative;
 
@@ -40,4 +45,10 @@
 
   }
 
+}
+
+.Navigation-Link--home,
+.Navigation-Link--press,
+.Navigation-Link--about {
+  display: none;
 }

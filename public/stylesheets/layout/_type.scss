@@ -7,7 +7,7 @@ html,
 }
 
 body {
-  font-family: 'Libre Baskerville', serif;
+  font-family: $ff-serif;
   color: $ironsideGray;
   font-size: rem(14px);
   line-height: $baseLineHeight;
@@ -18,7 +18,7 @@ p {
 }
 
 .Label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $ff-sans-serif;
   font-size: rem(14px);
 
   + .Headline {
@@ -28,7 +28,7 @@ p {
 }
 
 .Label-headline {
-  margin-top: $marginXXL;
+  margin-top: $marginM;
   text-align: center;
   text-transform: uppercase;
   color: $zorba;
@@ -78,7 +78,7 @@ p {
   padding-top: $paddingM;
   font-weight: normal;
   position: relative;
-  margin: $marginXL 0;
+  margin: $marginM 0;
 
   &:before {
     content: "";

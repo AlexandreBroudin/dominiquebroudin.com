@@ -1,23 +1,16 @@
 .MediaItems {
   padding: 0;
-  margin: 0 -30px;
-  font-size: 0;
   text-align: center;
 }
 
 .MediaItem {
-  font-size: $baseFontSize;
-  width: 25%;
-  padding: 0 30px;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: $marginXXL;
+  padding: 0 $paddingM;
+  margin-bottom: $marginL;
   text-align: left;
 
   &:hover {
     opacity: .9;
   }
-
 }
 
 .MediaItem--big {
@@ -26,15 +19,20 @@
 
 .MediaItem-Image {
   width: 100%;
-  margin-bottom: $marginM;
+  margin-bottom: $marginS;
 }
 
 .MediaItem-Link {
   text-decoration: none;
   color: $ironsideGray;
+  display: block;
 
   &:hover {
     color: $steelBlue;
   }
+}
 
+.MediaItem-Description {
+  margin-top: $marginS;
+  margin-bottom: 0;
 }

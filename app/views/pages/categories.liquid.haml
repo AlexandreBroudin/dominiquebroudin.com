@@ -24,16 +24,11 @@ published: true
 #   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
 ---
 {% extends 'index' %}
-{% block header %}
-%header
-  {% include 'searchbar' %}
-  {% include 'navigation' %}
-{% endblock %}
 {% block main %}
-.row.u-mt--l
+.Row.u-mt--l
   %ul.MediaItems
     {% for category in contents.categories %}
-    {% include 'media-item-categories' %}
+    {% include 'media-item-categories' , with modifier: "2", smallModifier: "4" %}
     {% endfor %}
 
 {% endblock %}

@@ -1,5 +1,5 @@
-%form{:action => "{% path_to search %}", :method => "GET"}
-  .InputGroup.SearchForm
+%form.SearchForm{:action => "{% path_to search %}", :method => "GET"}
+  .InputGroup
     {% include 'input' with type: "text", id: 'search', name: 'search', placeholder: 'Rerchercher un objet en particulier', class: 'InputGroup-Input' %}
     .InputGroup-addOn
       {% include 'button' with value: 'Rechercher', class: 'InputGroup-Button', type: 'submit' %}

@@ -3,6 +3,64 @@
 #   {{ 'hello_world' | translate }}
 #
 
-# hello_world:
-#   en: Hello world !
-#   fr: Bonjour le monde !
+Category:
+ en: Category
+ fr: Categorie
+
+Home:
+ en: Home
+ fr: Accueil
+ fr: Categorie
+
+About:
+ en: About
+ fr: À propos
+ fr: Categorie
+
+Press:
+ en: Press
+ fr: Presse
+
+Galery:
+ en: Galery
+ fr: Gallerie
+
+Contact:
+ en: Contact
+ fr: Contacter
+
+Search:
+ en: Search
+ fr: Rechercher
+
+recently_added:
+ en: Recently added
+ fr: Récemment ajouté
+
+contact_description:
+ en: A question ? A request ? <br> Contact me!
+ fr: Une question ? une requête ? <br> Contactez moi!
+
+Name:
+ en: Name
+ fr: Nom
+
+Email:
+ en: Email
+ fr: Adresse Email
+
+Subject:
+ en: Subject
+ fr: Objet de votre demande
+
+Message:
+ en: Message
+ fr: Votre message
+
+Submit:
+ en: Submit
+ fr: Envoyer
+
+site_name:
+ en: "<span class='HomeHeader-title--part1'>Dominique Broudin,</span> <span class='HomeHeader-title--part2'>militariat de collection</span> <span class='HomeHeader-title--part3'>WW1</span>"
+ fr: "<span class='HomeHeader-title--part1'>Dominique Broudin,</span> <span class='HomeHeader-title--part2'>militariat de collection</span> <span class='HomeHeader-title--part3'>1914-1918</span>"

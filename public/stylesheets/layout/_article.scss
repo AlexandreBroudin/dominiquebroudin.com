@@ -1,3 +1,18 @@
 .Article {
   margin-bottom: $marginXXL;
+  padding: 0 $paddingM;
+  display: flex;
+  flex-direction: column;
+}
+
+.Article-Headline {
+  margin-bottom: $marginM;
+}
+
+.Article-media {
+  order: 0;
+}
+
+.Article-text {
+  order: 1;
 }

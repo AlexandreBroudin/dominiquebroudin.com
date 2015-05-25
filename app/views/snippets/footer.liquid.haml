@@ -1,30 +1,24 @@
-.Footer.row
-  .c.c-2
+.Footer.Row
+  .Column.Column-2.Column-small-4
     {% include 'contact-form' %}
-  .c.c-2
-    .row
-      .c.c-2
+  .Column.Column-2.Column-small-4
+    #about.Row
+      .Column.Column-2.Column-small-4
         .Footer-column
-          .Label.Footer-columnHeaderLabel About
+          .Label.Footer-columnHeaderLabel {{ 'About' | translate }}
           %p
             Dominique Broudin
           %p
-            Baldessari’s work was central to the growth of Conceptual Art in the 1960s and '70s
-
-      .c.c-2
-        .Footer-column
-          .Label.Footer-columnHeaderLabel Categories
+            {{ site.meta_description  }}
+      .Column.Column-2.Column-small-4.Row
+        .Footer-column.Column.Column-small-2
+          .Label.Footer-columnHeaderLabel {{ 'Category' | translate }}
           %ul.List.Footer-list
+            {% for category in contents.categories %}
             %li.List-item
-              %a{:href => ""} Medecine
-            %li.List-item
-              %a{:href => ""} Tenues
-            %li.List-item
-              %a{:href => ""} Armes
-            %li.List-item
-              %a{:href => ""} Divers
-
-        .Footer-column
+              %a{:href => "/categories/{{ category._slug }}"} {{ category.title }}
+            {% endfor %}
+        .Footer-column.Column.Column-small-2
           .Label.Footer-columnHeaderLabel Share it
           %ul.List.Footer-list
             %li.List-item

@@ -1,4 +1,4 @@
-<li class="MediaItem{% if modifier %} MediaItem--{{modifier}}{% endif %}">
+<li class="Column {% if modifier %}Column-{{modifier}}{% endif %} {% if smallModifier %}Column-small-{{ smallModifier }}{% endif %} MediaItem">
   <a href="/objects/{{ object._slug }}" class="MediaItem-Link">
     <img class="MediaItem-Image" src="{{ object.photo.url }}" alt="">
   </a>

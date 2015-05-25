@@ -4,19 +4,23 @@ content_type: "categories"
 ---
 {% extends 'index' %}
 {% block header %}
-%header
-  .InputGroup.SearchForm
-    {% include 'input' with type: "text", placeholder: 'Rerchercher un objet en particulier', class: 'InputGroup-Input' %}
-    .InputGroup-addOn
-      {% include 'button' with value: 'Rechercher', class: 'InputGroup-Button' %}
+%header.Header.CategoryHeader
+  .CategoryHeader-image{:style => "background-image: url('http://placekitten.com/360/180');"}
+  .CategoryHeader-content
+    %h1.Header-title
+      %a.Header-titleText{:href => "/"}
+        {{ site.name }}
+    {% include 'searchbar' %}
+    .Label.Label-headline.Category-LabelHeadline
+      {{ 'Category' | translate }}
+    %h1.Category-headline.Headline.Headline-2.u-tac
+      {{ category.title }}
   {% include 'navigation' %}
 {% endblock %}
 {% block main %}
-%h1.Headline.Headline-1.u-tac.u-mb--xxl
-  {{ category.title }}
-.row.u-mt--l
+.Row.u-mt--l
   {% if category.objects == empty %}
-  %p.u-tac.u-mb--xxl
+  %p.u-tac.u-mb--xxl.Column.Column-4
     Nothing here
   {% else %}
   %ul.MediaItems

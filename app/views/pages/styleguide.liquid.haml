@@ -34,161 +34,161 @@ published: true
   {{ 'styleguide.css' | stylesheet_tag }}
   %body
     .Container.Container--fixed
-      .row
-        .c.c-4
+      .Row
+        .Column.Column-4
           %h1.Headline-1 {{ page.title }}
-      .row
-        .c.c-4
+      .Row
+        .Column.Column-4
           %h2.sg-Headline-2 Grid
           %p
             4 columns, 980px width, 25% column width
-      .row
-        .c.c-1.sg-Grid-cell
-        .c.c-1.sg-Grid-cell
-        .c.c-1.sg-Grid-cell
-        .c.c-1.sg-Grid-cell
-      .row
-        .c.c-2.sg-Grid-cell
-        .c.c-2.sg-Grid-cell
-      .row
-        .c.c-3.sg-Grid-cell
-        .c.c-1.sg-Grid-cell
-      .row
-        .c.c-4.sg-Grid-cell
+      .Row
+        .Column.Column-1.sg-Grid-cell
+        .Column.Column-1.sg-Grid-cell
+        .Column.Column-1.sg-Grid-cell
+        .Column.Column-1.sg-Grid-cell
+      .Row
+        .Column.Column-2.sg-Grid-cell
+        .Column.Column-2.sg-Grid-cell
+      .Row
+        .Column.Column-3.sg-Grid-cell
+        .Column.Column-1.sg-Grid-cell
+      .Row
+        .Column.Column-4.sg-Grid-cell
 
-      .row
-        .c.c-4
+      .Row
+        .Column.Column-4
           %h2.sg-Headline-2 Colors
           %p Only 4 colors
-      .row
-        .c.c-1.sg-Color-cell.sg-Color-cell--1
-        .c.c-1.sg-Color-cell.sg-Color-cell--2
-        .c.c-1.sg-Color-cell.sg-Color-cell--3
-        .c.c-1.sg-Color-cell.sg-Color-cell--4
-      .row
-        .c.c-1.sg-Cell
+      .Row
+        .Column.Column-1.sg-Color-cell.sg-Color-cell--1
+        .Column.Column-1.sg-Color-cell.sg-Color-cell--2
+        .Column.Column-1.sg-Color-cell.sg-Color-cell--3
+        .Column.Column-1.sg-Color-cell.sg-Color-cell--4
+      .Row
+        .Column.Column-1.sg-Cell
           2px borders 30% opacity of $zobar, $ironsideGray
-        .c.c-1.sg-Cell
+        .Column.Column-1.sg-Cell
           Labels, Alternate texts, input borders $zorba
-        .c.c-1.sg-Cell
+        .Column.Column-1.sg-Cell
           Text $westar
-        .c.c-1.sg-Cell
+        .Column.Column-1.sg-Cell
           Links, input focus borders
 
-      .row
-        .c.c-4
+      .Row
+        .Column.Column-4
           %h2.sg-Headline-2 Typography
           %p Everything is REMified
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Small title label
-        .c.c-3.sg-Cell.Label
+        .Column.Column-3.sg-Cell.Label
           Montserrat 14pt
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Headlines
-        .c.c-3.Headline-2
+        .Column.Column-3.Headline-2
           Libre Baskerville 47pt
-      .row
-        .c.c-1
-        .c.c-3.Headline-2
+      .Row
+        .Column.Column-1
+        .Column.Column-3.Headline-2
           Libre Baskerville 32pt
-      .row
-        .c.c-1
-        .c.c-3.Headline-3
+      .Row
+        .Column.Column-1
+        .Column.Column-3.Headline-3
           Libre Baskerville 21pt
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Body text
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           Libre Baskerville 14pt  -  lineheight 24pt <br/>
           Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Section title <br/> seperator
-        .c.c-3
+        .Column.Column-3
           .SectionTitle.Label
             Section Title
 
-      .row
-        .c.c-4
+      .Row
+        .Column.Column-4
           %h2.sg-Headline-2 Navigation
-      .row
-        .c.c-1
-        .c.c-3.sg-Cell
+      .Row
+        .Column.Column-1
+        .Column.Column-3.sg-Cell
           {% include 'navigation' %}
-      .row
-        .c.c-4
+      .Row
+        .Column.Column-4
           %h2.sg-Headline-2 Forms
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Input big and small
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           {% include 'input' with type: "text", placeholder: 'Placeholder' %}
           {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 's' %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Input on dark background
-        .c.c-3.sg-Cell.sg-darkBackground
+        .Column.Column-3.sg-Cell.sg-darkBackground
           {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 'light' %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Input block
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 'block' %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Input group
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           .InputGroup
             {% include 'input' with type: "text", placeholder: 'Placeholder', class: 'InputGroup-Input' %}
             .InputGroup-addOn
               {% include 'button' with value: 'Button', class: 'InputGroup-Button' %}
-      .row
-        .c.c-1
-        .c.c-3.sg-Cell
+      .Row
+        .Column.Column-1
+        .Column.Column-3.sg-Cell
           .InputGroup
             .InputGroup-addOn
               {% include 'button' with value: 'Button', class: 'InputGroup-Button' %}
             {% include 'input' with type: "text", placeholder: 'Placeholder', class: 'InputGroup-Input' %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Input group on dark background
-        .c.c-3.sg-Cell.sg-darkBackground
+        .Column.Column-3.sg-Cell.sg-darkBackground
           .InputGroup
             {% include 'input' with type: "text", placeholder: 'Placeholder', modifier: 'light', class: 'InputGroup-Input' %}
             .InputGroup-addOn
               {% include 'button' with value: 'Button', modifier: 'light', class: 'InputGroup-Button' %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Disabled
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           {% include 'input' with type: "text", placeholder: 'Placeholder', disabled: true %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Focused
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           {% include 'input' with type: "text", focused: true, placeholder: 'Placeholder' %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Buttons
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           {% include 'button' with value: 'Button' %}
           {% include 'button' with value: 'Submit', modifier: 'validate' %}
-      .row
-        .c.c-1.sg-Headline-3
+      .Row
+        .Column.Column-1.sg-Headline-3
           Dropdown
-        .c.c-3.sg-Cell
+        .Column.Column-3.sg-Cell
           .Dropdown
             %select.Dropdown-Select
               %option{:value => "Lorem"} Lorem
               %option{:value => "Ipsum"} Ipsum
               %option{:value => "Dolor"} Dolor
-      .row
-        .c.c-4.sg-Headline-3
+      .Row
+        .Column.Column-4.sg-Headline-3
           Media collection
-      .row
-        .c.c-12
+      .Row
+        .Column.Column-12
           %ul.MediaItems
             {% include 'media-item' with modifier: "big" %}
             {% include 'media-item' with modifier: "big"  %}
@@ -198,8 +198,8 @@ published: true
             {% include 'media-item' %}
             {% include 'media-item' %}
             {% include 'media-item' %}
-      .row
-        .c.c-4.sg-Headline-3
+      .Row
+        .Column.Column-4.sg-Headline-3
           List
-      .row
-        .c.c-12
+      .Row
+        .Column.Column-12
