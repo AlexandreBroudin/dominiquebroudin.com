@@ -2,3 +2,10 @@
   margin: $marginM;
   display: none;
 }
+
+@include bp($bp--laptop) {
+  .SearchForm {
+    display: block;
+    order: 1;
+  }
+}

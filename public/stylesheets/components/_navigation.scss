@@ -52,3 +52,21 @@
 .Navigation-Link--about {
   display: none;
 }
+
+@include bp($bp--laptop) {
+
+  .Navigation {
+    order: 3;
+  }
+
+  .Navigation-Link--search {
+    display: none;
+  }
+
+  .Navigation-Link--home,
+  .Navigation-Link--press,
+  .Navigation-Link--about {
+    display: inline-block;
+  }
+
+}

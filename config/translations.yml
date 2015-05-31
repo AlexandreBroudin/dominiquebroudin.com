@@ -33,6 +33,10 @@ Search:
  en: Search
  fr: Rechercher
 
+search_placeholder:
+ en: Search for an object
+ fr: Rechercher un objet
+
 recently_added:
  en: Recently added
  fr: Récemment ajouté

@@ -3,7 +3,7 @@
 
 html,
 :root {
-  font-size: $baseFontSize / 16px * 100%; // sets rem base at 14px;
+  font-size: $base-lh / 16px * 100%; // sets rem base at 14px;
 }
 
 body {

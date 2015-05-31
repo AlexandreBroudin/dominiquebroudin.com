@@ -7,10 +7,7 @@ content_type: "categories"
 %header.Header.CategoryHeader
   .CategoryHeader-image{:style => "background-image: url('http://placekitten.com/360/180');"}
   .CategoryHeader-content
-    %h1.Header-title
-      %a.Header-titleText{:href => "/"}
-        {{ site.name }}
-    {% include 'searchbar' %}
+    {% include 'searchbar' with modifier: "light"  %}
     .Label.Label-headline.Category-LabelHeadline
       {{ 'Category' | translate }}
     %h1.Category-headline.Headline.Headline-2.u-tac
@@ -25,7 +22,7 @@ content_type: "categories"
   {% else %}
   %ul.MediaItems
     {% for object in category.objects %}
-    {% include 'media-item' %}
+    {% include 'media-item', with modifier: "1", smallModifier: "4" %}
     {% endfor %}
   {% endif %}
 {% endblock %}

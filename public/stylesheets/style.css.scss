@@ -9,10 +9,12 @@
 @import "variables/type";
 @import "variables/settings";
 @import "variables/colors";
+@import "variables/breakpoints";
 
 // Helpers
 @import "helpers/clearfix";
 @import "utilities/placeholder";
+@import "utilities/breakpoints";
 
 // Components
 @import "components/grid";

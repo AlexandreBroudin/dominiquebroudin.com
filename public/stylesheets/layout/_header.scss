@@ -11,7 +11,7 @@
   width: 100%;
   margin: 0 auto;
   font-weight: normal;
-  font-size: $baseFontSize;
+  font-size: $base-lh;
   font-family: $ff-sans-serif;
   color: $westar;
   padding: $paddingS $paddingM;
@@ -63,4 +63,39 @@
 .Category-LabelHeadline {
   color: $white;
   margin-top: $marginS;
+}
+
+@include bp($bp--laptop) {
+
+  .Header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .Header-title {
+    order: 2;
+    flex: 1;
+    font-size: rem(71px);
+    line-height: rem(72px);
+    font-family: $ff-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .HomeHeader-title--part3 {
+    display: block;
+  }
+
+  .CategoryHeader {
+    height: auto;
+  }
+
+  .CategoryHeader-title {
+    font-size: rem(32px);
+    line-height: rem(48px);
+    margin-bottom: $marginM;
+  }
+
 }

@@ -2,7 +2,7 @@
 // base font has to be defined to :root
 
 @function rem($size) {
-  $remSize: $size / $baseFontSize;
+  $remSize: $size / $base-lh;
   @return $remSize * 1rem;
 }
 
@@ -49,7 +49,7 @@
     $val  : parseInt($value);
 
     @if ($px-only) and ($unit == 'rem') {
-          $list: append($list, floor(($val * $baseFontSize)));
+          $list: append($list, floor(($val * $base-lh)));
     }
 
     @else if ($unit == 'px') or ($unit == 'rem') {
