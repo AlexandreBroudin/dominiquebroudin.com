@@ -3,6 +3,13 @@ title: Event template page
 content_type: "objects"
 ---
 {% extends 'index' %}
+{% block header %}
+%header.Header.ObjectHeader
+  .ObjectHeader-image{:style => "background-image: url('http://placekitten.com/360/180');"}
+  .ObjectHeader-content
+    {% include 'searchbar'  %}
+  {% include 'navigation' %}
+{% endblock %}
 {% block main %}
 %a.Label.Label-headline{:href => "/categories/{{ object.category._slug }}"}
   {{ object.category.title }}

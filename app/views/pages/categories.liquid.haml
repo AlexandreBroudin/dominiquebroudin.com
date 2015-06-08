@@ -28,8 +28,8 @@ published: true
 %header.Header.CategoryHeader
   %h1.Header-title.CategoryHeader-title
     %a.Header-titleText{:href => "/"}
-      {{ page.title | capitalize }}
-  {% include 'searchbar' %}
+      {{ 'Galery' | translate }}
+  {% include 'searchbar'  with modifier: "light"  %}
   {% include 'navigation' %}
 {% endblock %}
 {% block main %}

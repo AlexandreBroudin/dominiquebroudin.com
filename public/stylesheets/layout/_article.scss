@@ -16,3 +16,9 @@
 .Article-text {
   order: 1;
 }
+
+@include bp($bp--laptop) {
+  .Article {
+    display: block;
+  }
+}
